@@ -5,6 +5,7 @@ import { Controller, Form, useForm } from 'react-hook-form'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { LoginStackNavigatorParam } from '../types/LoginStackNavigatorParam'
 import { useNavigation } from '@react-navigation/native'
+import MaterialIcon from '../components/MaterialIcon'
 
 type LoginScreenProp = NativeStackNavigationProp<LoginStackNavigatorParam, 'Login'>
 
@@ -38,6 +39,7 @@ const Login = () => {
   const registerForm = () => {
     return (
       <View style={{ width: '90%' }}>
+        <MaterialIcon size="large" color="purple" name="home"/>
          <Controller
           control={control2}
           name="fullname"

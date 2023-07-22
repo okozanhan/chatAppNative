@@ -13,7 +13,6 @@
  import LoginStack from './src/navigation/LoginStack';
  
  
- 
  function App(): JSX.Element {
    const isDarkMode = useColorScheme() === 'dark';
 

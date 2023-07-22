@@ -1,4 +1,5 @@
 export type LoginStackNavigatorParam = {
     Home: any;
-    Login:undefined
+    Login:undefined;
+    Messages:undefined
 }

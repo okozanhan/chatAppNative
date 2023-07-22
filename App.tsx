@@ -5,29 +5,32 @@
  * @format
  */
 
- import React from 'react';
- import { useColorScheme, } from 'react-native';
- 
- import { Colors } from 'react-native/Libraries/NewAppScreen';
- import { NavigationContainer } from '@react-navigation/native';
- import LoginStack from './src/navigation/LoginStack';
- 
- 
- function App(): JSX.Element {
-   const isDarkMode = useColorScheme() === 'dark';
+import React from 'react';
+import { useColorScheme, } from 'react-native';
 
-   const backgroundStyle = {
-     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-   };
- 
- 
-   return (
-     <NavigationContainer>
-       <LoginStack></LoginStack>
-     </NavigationContainer>
-   );
- }
- 
- 
- 
- export default App;
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import LoginStack from './src/navigation/LoginStack';
+import { NativeBaseProvider } from 'native-base';
+
+
+function App(): JSX.Element {
+  const isDarkMode = useColorScheme() === 'dark';
+
+  const backgroundStyle = {
+    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  };
+
+
+  return (
+    <NativeBaseProvider>
+      <NavigationContainer>
+        <LoginStack></LoginStack>
+      </NavigationContainer>
+    </NativeBaseProvider>
+  );
+}
+
+
+
+export default App;

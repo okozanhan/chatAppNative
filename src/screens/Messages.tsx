@@ -14,7 +14,7 @@ const Messages = () => {
     const navigation = useNavigation<messagesScreemProp>()
 
     const redirect = () => {
-        navigation.navigate("Home")
+        navigation.navigate("Chat")
     }
 
     return (
@@ -83,8 +83,8 @@ const Messages = () => {
                                         <Text color={'black'} bold >
                                             username
                                         </Text>
-                                        <Text color={'black'} bold >
-                                            asdasd username username usas
+                                        <Text color={'black'} bold numberOfLines={1} ellipsizeMode="tail">
+                                            asdasd username username usas alksdklas alksdklaskld klasdklas
                                         </Text>
                                     </Flex>
                                 </Flex>
@@ -164,6 +164,8 @@ const styles = StyleSheet.create({
     message: {
         width: "100%",
         padding: 10,
+        borderColor: '#F8F8F8',
+        borderBottomWidth: 2
     },
     story: {
         // marginTop: 10,

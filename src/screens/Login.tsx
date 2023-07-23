@@ -28,7 +28,7 @@ const Login = () => {
 
   const handlelogin = (data: any) => {
     if (data.email.toLowerCase() == 'admin' && data.password.toLowerCase() == 'admin') {
-      // navigation.navigate('Messages')
+      navigation.navigate('Messages')
     }
   }
 

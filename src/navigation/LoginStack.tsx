@@ -7,6 +7,7 @@ import Home from '../screens/Home'
 import Login from '../screens/Login'
 import { LoginStackNavigatorParam } from '../types/LoginStackNavigatorParam'
 import Messages from '../screens/Messages'
+import Chat from '../screens/Chat'
 
 
 const LoginStack = () => {
@@ -16,6 +17,8 @@ const LoginStack = () => {
             <Stack.Screen options={{ headerShown: false }} name="Home" component={Home} />
             <Stack.Screen options={{ headerShown: false }} name="Login" component={Login} />
             <Stack.Screen options={{ headerShown: false }} name="Messages" component={Messages} />
+            <Stack.Screen options={{ headerShown: false }} name="Chat" component={Chat} />
+
         </Stack.Navigator>
     )
 }

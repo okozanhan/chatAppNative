@@ -29,7 +29,6 @@ const Messages = () => {
                             <Icon name="gesture" size={20} color="gold" />
                         </View>
                     </View>
-
                     <Text style={styles.text2} color={'white'}>
                         ChatApp
                     </Text>

@@ -26,7 +26,7 @@ const Messages = () => {
                             Welcome User
                         </Text>
                         <View style={{ marginLeft: 10 }}>
-                            <Icon name="gesture" size={20} color="#900" />
+                            <Icon name="gesture" size={20} color="gold" />
                         </View>
                     </View>
 
@@ -64,7 +64,7 @@ const Messages = () => {
                             Recent Chat
                         </Text>
                         <Flex direction='row' alignItems={"center"} backgroundColor={"#F4E0B9"} p={2} borderRadius={50}>
-                            <Icon name="archive" size={20} color="#900" />
+                            <Icon name="archive" size={20} color="black" />
                             <Text color={'black'} bold>
                                 Archive Chat
                             </Text>
@@ -98,19 +98,19 @@ const Messages = () => {
                 <View style={{ backgroundColor: "gray", justifyContent: "space-between" }}>
                     <View style={styles.bottom}>
                         <View style={styles.tabItem}>
-                            <Icon name="archive" size={20} color="#900" />
+                            <Icon name="call" size={20} color="white" />
                             <Text color={'white'} >
                                 Calls
                             </Text>
                         </View>
                         <View style={styles.tabItem}>
-                            <Icon name="archive" size={20} color="#900" />
+                            <Icon name="message" size={20} color="white" />
                             <Text color={'white'} >
                                 Messages
                             </Text>
                         </View>
                         <View style={styles.tabItem}>
-                            <Icon name="archive" size={20} color="#900" />
+                            <Icon name="person" size={20} color="white" />
                             <Text color={'white'} >
                                 Profile
                             </Text>

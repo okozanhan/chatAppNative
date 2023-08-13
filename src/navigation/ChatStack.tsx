@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Messages from '../screens/Messages'
 import Chat from '../screens/Chat'
 import { ChatStackNavigatorParam } from '../types/NavigatorParam'
+import Profile from '../screens/Profile'
 
 const ChatStack = () => {
     const Stack = createNativeStackNavigator<ChatStackNavigatorParam>()
@@ -12,6 +13,7 @@ const ChatStack = () => {
         <Stack.Navigator >
             <Stack.Screen options={{ headerShown: false }} name="Messages" component={Messages} />
             <Stack.Screen options={{ headerShown: false }} name="Chat" component={Chat} />
+            <Stack.Screen options={{ headerShown: false }} name="Profile" component={Profile} />
         </Stack.Navigator>
     )
 }

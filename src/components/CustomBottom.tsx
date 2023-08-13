@@ -34,7 +34,7 @@ const CustomBottom = () => {
                         Messages
                     </Text>
                 </View>
-                <TouchableOpacity onPress={() => navigation.navigate("Chat")}>
+                <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
                     <View style={styles.tabItem}>
                         <Icon name="person" size={20} color="white" />
                         <Text color={'white'}>
@@ -42,6 +42,7 @@ const CustomBottom = () => {
                         </Text>
                     </View>
                 </TouchableOpacity>
+
             </View>
         </View>
     )

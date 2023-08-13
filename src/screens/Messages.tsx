@@ -2,9 +2,10 @@ import { StyleSheet, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { Avatar, Box, Button, Flex, Text, View } from 'native-base';
 import { useNavigation } from '@react-navigation/native';
-import { ChatStackNavigatorParam, LoginStackNavigatorParam } from '../types/NavigatorParam';
+import { ChatStackNavigatorParam } from '../types/NavigatorParam';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import CustomBottom from '../components/CustomBottom';
 
 type messagesScreemProp = NativeStackNavigationProp<ChatStackNavigatorParam, "Messages">
 
@@ -94,31 +95,8 @@ const Messages = () => {
                         </TouchableOpacity>
                     </Box>
                 </Box>
-                <View style={{ backgroundColor: "gray", justifyContent: "space-between" }}>
-                    <View style={styles.bottom}>
-                        <View style={styles.tabItem}>
-                            <Icon name="call" size={20} color="white" />
-                            <Text color={'white'} >
-                                Calls
-                            </Text>
-                        </View>
-                        <View style={styles.tabItem}>
-                            <Icon name="message" size={20} color="white" />
-                            <Text color={'white'} >
-                                Messages
-                            </Text>
-                        </View>
-                        <View style={styles.tabItem}>
-                            <Icon name="person" size={20} color="white" />
-                            <Text color={'white'} >
-                                Profile
-                            </Text>
-                        </View>
-                    </View>
-                </View>
+               <CustomBottom />
             </Flex>
-
-
         </View>
     )
 }
@@ -182,21 +160,6 @@ const styles = StyleSheet.create({
         borderTopStartRadius: 50,
         borderTopEndRadius: 50,
     },
-    bottom: {
-        position: 'absolute',
-        bottom: 10,
-        left: 20,
-        right: 20,
-        backgroundColor: '#0D0703',
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        padding: 10,
-        borderRadius: 50,
-    },
-    tabItem: {
-        flexDirection: 'column',
-        alignItems: 'center',
-    }
 });
 
 export default Messages

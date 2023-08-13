@@ -6,5 +6,6 @@ export type LoginStackNavigatorParam = {
 export type ChatStackNavigatorParam = {
     Messages: undefined,
     Chat: undefined,
-    ChatStack: undefined
+    ChatStack: undefined,
+    Profile:undefined
 }

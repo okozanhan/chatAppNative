@@ -1,11 +1,19 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { Avatar, Badge, Box, Center, Flex, HStack, Input, ScrollView, Text, VStack, View } from 'native-base'
 import MaterialIcon from '../components/MaterialIcon'
 import { ChatMessage } from '../types/ChatMessage'
+import { useNavigation } from '@react-navigation/native'
+import { NativeStackNavigationProp } from '@react-navigation/native-stack'
+import { LoginStackNavigatorParam } from '../types/NavigatorParam'
+
+type LoginScreenProp = NativeStackNavigationProp<LoginStackNavigatorParam, 'Login'>
 
 const Chat = () => {
     const [messages, setmessages] = useState<ChatMessage[] | undefined>([])
+    const navigation = useNavigation<LoginScreenProp>()
+
+
     useEffect(() => {
         setmessages([{
             UserId: '1',
@@ -34,17 +42,17 @@ const Chat = () => {
     }, [])
 
 
-
-
     return (
         <View style={{ height: '100%', backgroundColor: 'black' }}>
             <Flex direction='column' style={{ height: '100%' }}>
                 <Box flex={1} style={styles.title}>
                     <Flex style={styles.titleflex} direction='row' >
                         <Box flex={2}>
-                            <Box style={styles.buttonContainer}>
-                                <MaterialIcon name='chevron-left' color='white' size='large' />
-                            </Box>
+                            <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.goBack()}>
+                                <Box style={styles.buttonContainer}>
+                                    <MaterialIcon name='chevron-left' color='white' size='large' />
+                                </Box>
+                            </TouchableOpacity>
                         </Box>
                         <Box flex={8}>
                             <Flex direction='row' alignItems={'center'} >

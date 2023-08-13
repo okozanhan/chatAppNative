@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { Box, Button, Center, Checkbox, Divider, Flex, Input, KeyboardAvoidingView, Text } from 'native-base'
 import { Controller, Form, useForm } from 'react-hook-form'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
-import { LoginStackNavigatorParam } from '../types/LoginStackNavigatorParam'
+import { LoginStackNavigatorParam } from '../types/NavigatorParam'
 import { useNavigation } from '@react-navigation/native'
 import MaterialIcon from '../components/MaterialIcon'
 
@@ -28,7 +28,7 @@ const Login = () => {
 
   const handlelogin = (data: any) => {
     if (data.email.toLowerCase() == 'admin' && data.password.toLowerCase() == 'admin') {
-      navigation.navigate('Messages')
+      navigation.navigate('ChatStack')
     }
   }
 

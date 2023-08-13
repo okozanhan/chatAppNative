@@ -5,9 +5,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import Home from '../screens/Home'
 import Login from '../screens/Login'
-import { LoginStackNavigatorParam } from '../types/LoginStackNavigatorParam'
-import Messages from '../screens/Messages'
-import Chat from '../screens/Chat'
+import { LoginStackNavigatorParam } from '../types/NavigatorParam'
+import ChatStack from './ChatStack'
 
 
 const LoginStack = () => {
@@ -16,9 +15,7 @@ const LoginStack = () => {
         <Stack.Navigator >
             <Stack.Screen options={{ headerShown: false }} name="Home" component={Home} />
             <Stack.Screen options={{ headerShown: false }} name="Login" component={Login} />
-            <Stack.Screen options={{ headerShown: false }} name="Messages" component={Messages} />
-            <Stack.Screen options={{ headerShown: false }} name="Chat" component={Chat} />
-
+            <Stack.Screen options={{ headerShown: false }} name="ChatStack" component={ChatStack} />
         </Stack.Navigator>
     )
 }

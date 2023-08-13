@@ -2,11 +2,11 @@ import { StyleSheet, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { Avatar, Box, Button, Flex, Text, View } from 'native-base';
 import { useNavigation } from '@react-navigation/native';
-import { LoginStackNavigatorParam } from '../types/LoginStackNavigatorParam';
+import { ChatStackNavigatorParam, LoginStackNavigatorParam } from '../types/NavigatorParam';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-type messagesScreemProp = NativeStackNavigationProp<LoginStackNavigatorParam, "Messages">
+type messagesScreemProp = NativeStackNavigationProp<ChatStackNavigatorParam, "Messages">
 
 
 const Messages = () => {

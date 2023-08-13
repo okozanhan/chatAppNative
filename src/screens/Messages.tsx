@@ -1,6 +1,6 @@
 import { StyleSheet, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { Avatar, Box, Button, Flex, Text, View } from 'native-base';
+import { Avatar, Box, Button, Flex, ScrollView, Text, View } from 'native-base';
 import { useNavigation } from '@react-navigation/native';
 import { ChatStackNavigatorParam } from '../types/NavigatorParam';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -70,7 +70,7 @@ const Messages = () => {
                             </Text>
                         </Flex>
                     </View>
-                    <Box>
+                    <ScrollView>
                         <TouchableOpacity onPress={redirect}>
                             <Flex direction='row' alignItems={"center"} style={styles.message}>
                                 <Avatar bg="green.500" style={{ width: 50, height: 50 }} source={{
@@ -93,9 +93,9 @@ const Messages = () => {
                                 </Text>
                             </Flex>
                         </TouchableOpacity>
-                    </Box>
+                    </ScrollView>
                 </Box>
-               <CustomBottom />
+                <CustomBottom />
             </Flex>
         </View>
     )

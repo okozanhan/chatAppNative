@@ -20,11 +20,11 @@ const CustomBottom = () => {
     return (
         <View style={{ backgroundColor: "gray", justifyContent: "space-between" }}>
             <View style={styles.bottom}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate("Chat")}>
                     <View style={styles.tabItem}>
-                        <Icon name="call" size={20} color="white" />
+                        <Icon name="task-alt" size={20} color="white" />
                         <Text color={'white'} >
-                            Calls
+                            Tasks
                         </Text>
                     </View>
                 </TouchableOpacity>
@@ -34,12 +34,14 @@ const CustomBottom = () => {
                         Messages
                     </Text>
                 </View>
-                <View style={styles.tabItem}>
-                    <Icon name="person" size={20} color="white" />
-                    <Text color={'white'} onPress={()=> navigation.navigate("Chat")}>
-                        Profile
-                    </Text>
-                </View>
+                <TouchableOpacity onPress={() => navigation.navigate("Chat")}>
+                    <View style={styles.tabItem}>
+                        <Icon name="person" size={20} color="white" />
+                        <Text color={'white'}>
+                            Profile
+                        </Text>
+                    </View>
+                </TouchableOpacity>
             </View>
         </View>
     )

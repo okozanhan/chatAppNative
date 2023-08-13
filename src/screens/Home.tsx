@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, Image } from 'react-native'
 import React from 'react'
 import { Box, Button } from 'native-base';
 import { useNavigation } from '@react-navigation/native';
-import { LoginStackNavigatorParam } from '../types/LoginStackNavigatorParam';
+import { LoginStackNavigatorParam } from '../types/NavigatorParam';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 type homeScreenProp = NativeStackNavigationProp<LoginStackNavigatorParam, "Home">

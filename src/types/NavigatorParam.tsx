@@ -7,5 +7,5 @@ export type ChatStackNavigatorParam = {
     Messages: undefined,
     Chat: undefined,
     ChatStack: undefined,
-    Profile:undefined
+    Profile:any
 }

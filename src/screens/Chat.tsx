@@ -1,4 +1,4 @@
-import { StyleSheet, TouchableOpacity } from 'react-native'
+import { SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { Avatar, Badge, Box, Center, Flex, HStack, Input, ScrollView, Text, VStack, View } from 'native-base'
 import MaterialIcon from '../components/MaterialIcon'
@@ -43,7 +43,7 @@ const Chat = () => {
 
 
     return (
-        <View style={{ height: '100%', backgroundColor: 'black' }}>
+        <SafeAreaView style={{ height: '100%', backgroundColor: 'black' }}>
             <Flex direction='column' style={{ height: '100%' }}>
                 <Box flex={1} style={styles.title}>
                     <Flex style={styles.titleflex} direction='row' >
@@ -98,7 +98,7 @@ const Chat = () => {
                 </Box>
 
             </Flex>
-        </View>
+        </SafeAreaView>
     )
 }
 

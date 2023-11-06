@@ -6,6 +6,7 @@ import { ChatStackNavigatorParam } from '../types/NavigatorParam';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import CustomBottom from '../components/CustomBottom';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 type messagesScreemProp = NativeStackNavigationProp<ChatStackNavigatorParam, "Messages">
 
@@ -19,7 +20,7 @@ const Messages = () => {
     }
 
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <Flex direction='column' style={{ height: '100%' }}>
                 <Box style={styles.box1} flex={1} >
                     <View style={styles.view1}>
@@ -97,7 +98,7 @@ const Messages = () => {
                 </Box>
                 <CustomBottom />
             </Flex>
-        </View>
+        </SafeAreaView>
     )
 }
 

@@ -1,27 +1,42 @@
-import { StyleSheet, TouchableOpacity, View } from 'react-native'
-import React from 'react'
+import { SafeAreaView, StyleSheet, TouchableOpacity, View } from 'react-native'
+import React, { FC, ReactNode, useEffect } from 'react'
 import { Avatar, Box, Center, Flex, Text, VStack } from 'native-base'
 import MaterialIcon from './MaterialIcon'
 import { useNavigation } from '@react-navigation/native'
 import { ChatStackNavigatorParam } from '../types/NavigatorParam'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 
+interface Props {
+    children?: ReactNode,
+}
 
-const CustomHeader = () => {
-    const navigation = useNavigation<ChatStackNavigatorParam>()
+const CustomHeader: FC<Props>  = ({ children }) => {
+    const navigation = useNavigation();
+
+    useEffect(() => {
+      console.log('burdayım')
+    
+     
+    }, [])
+    
+
+    const backTo=()=>{
+        navigation.goBack()
+    }
 
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
 
             <Flex direction='row' >
                 <Box flex={2}>
-                    <TouchableOpacity style={styles.buttonContainer} >
+                    <TouchableOpacity style={styles.buttonContainer} onPress={backTo}>
                         <Box style={styles.buttonContainer}>
                             <MaterialIcon name='chevron-left' color='white' size='large' />
                         </Box>
                     </TouchableOpacity>
                 </Box>
-                <Box flex={8}>
+                {children}
+                {/* <Box flex={8}>
                     <Flex direction='row' alignItems={'center'} >
                         <Avatar />
                         <VStack
@@ -34,10 +49,10 @@ const CustomHeader = () => {
                 <Box flex={1}>
                     <MaterialIcon name='more-vert' color='white' size='large' />
 
-                </Box>
+                </Box> */}
             </Flex>
 
-        </View>
+        </SafeAreaView>
     )
 }
 

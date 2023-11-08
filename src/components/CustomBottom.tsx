@@ -20,7 +20,7 @@ const CustomBottom = () => {
     return (
         <View style={{ backgroundColor: "gray", justifyContent: "space-between" }}>
             <View style={styles.bottom}>
-                <TouchableOpacity onPress={() => navigation.navigate("Chat")}>
+                <TouchableOpacity onPress={() => navigation.navigate("Tasks")}>
                     <View style={styles.tabItem}>
                         <Icon name="task-alt" size={20} color="white" />
                         <Text color={'white'} >

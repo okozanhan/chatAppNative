@@ -26,7 +26,6 @@ const CustomHeader: FC<Props>  = ({ children }) => {
 
     return (
         <SafeAreaView style={styles.container}>
-
             <Flex direction='row' >
                 <Box flex={2}>
                     <TouchableOpacity style={styles.buttonContainer} onPress={backTo}>
@@ -36,20 +35,6 @@ const CustomHeader: FC<Props>  = ({ children }) => {
                     </TouchableOpacity>
                 </Box>
                 {children}
-                {/* <Box flex={8}>
-                    <Flex direction='row' alignItems={'center'} >
-                        <Avatar />
-                        <VStack
-                            backgroundColor={'red'} ml={2}>
-                            <Text color={'white'}>Kübra Göktaş</Text>
-                            <Text color={'rgb(96,93,90)'} fontSize={'xs'} fontWeight={'bold'}>Online</Text>
-                        </VStack>
-                    </Flex>
-                </Box>
-                <Box flex={1}>
-                    <MaterialIcon name='more-vert' color='white' size='large' />
-
-                </Box> */}
             </Flex>
 
         </SafeAreaView>

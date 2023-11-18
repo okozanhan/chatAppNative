@@ -14,7 +14,6 @@ const CustomHeader: FC<Props>  = ({ children }) => {
     const navigation = useNavigation();
 
     useEffect(() => {
-      console.log('burdayım')
     
      
     }, [])
